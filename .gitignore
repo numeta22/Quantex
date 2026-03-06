@@ -18,3 +18,7 @@ data/
 
 # OneDrive temp files
 ~$*
+
+# txt files
+
+*.txt

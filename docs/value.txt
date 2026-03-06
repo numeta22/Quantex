@@ -1,7 +1,0 @@
-value 
- 
-integer Value indicating the sleep state. 
-1 = asleep, 2 = restless, 3 = awake 
-
-sleep quality ranked
-8-10 = Excellent, 5-7 = Moderate, 2-4 = Poor
