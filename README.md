@@ -1,8 +1,7 @@
-# Quantitative Trading Backtester
-Below is an example of a Simple Moving Average crossover backtest using Python package "backtesting", enjoy! - Beau
+# QuantConnect
 
 ## Main Ideas and Objectives
-Goal: Create an iterative system for trading stocks, FOREX currencies, options, derivatives, etc. using Python
+Goal: Iterative quantitative trading platform for trading stocks, FOREX, options, derivatives, and other volatile assets using Python and C++
 ### Import necessary packages
 ```python
 import pandas as pd
