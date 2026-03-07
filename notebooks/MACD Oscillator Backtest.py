@@ -37,15 +37,18 @@ def signal_generation(df,method):
 
 #plotting the backtesting result
 def plot(new, ticker):
+    
     fig=plt.figure()
     ax=fig.add_subplot(111)
 
     new['Close'].plot(label=ticker)
-    ax.plot(new.loc[new['signals']==1].index,new['Close'][new['signals']==1],label="LONG",lw=0,marker='^',c='r')
-    ax.plot(new.loc[new['signals']==1].index,new['Close'][new['signals']==1],label="SHORT",lw=0,marker='^',c='r')
+    ax.plot(new.loc[new['signals']==1].index,new['Close'][new['signals']==1],label="LONG",lw=0,marker='^',c='g')
+    ax.plot(new.loc[new['signals']==-1].index,new['Close'][new['signals']==-1],label="SHORT",lw=0,marker='v',c='r')
 
     plt.legend(loc='best')
     plt.grid(True)
+    plt.title('Positions')
+    
     plt.show()
 
     #the second plot is long/short moving average with oscillator
