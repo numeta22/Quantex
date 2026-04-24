@@ -1,0 +1,35 @@
+# AWS
+aws/
+# Git
+.git/
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.py[cod]
+*.egg-info/
+.eggs/
+*.pyc
+*.pyo
+.env/
+.env.*
+.DS_Store
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data
+data/
+
+# VSCode
+.vscode/
+.idea/
+
+# OneDrive temp files
+~$*
+
+# txt files
+
+*.txt
