@@ -45,7 +45,7 @@ def EG_Method(X,Y,show_summary=False):
         return True,model
     
 
-#verofy status of cointegration by observing historical datasets
+#verify status of cointegration by observing historical datasets
 #bandwith=number of data points for consideration
 #bandwidth is 250 by default
 #when z-stat crosses above the upper bound
