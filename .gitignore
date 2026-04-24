@@ -1,8 +1,14 @@
+# AWS
+aws/
+
 # Python
+venv/
 __pycache__/
 *.py[cod]
 *.egg-info/
 .eggs/
+*.pyc
+*.pyo
 .env
 .env.*
 .DS_Store
