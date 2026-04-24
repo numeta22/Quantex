@@ -2,34 +2,39 @@ import yfinance as yf
 import requests
 import json
 import pandas as pd
+import csv
 
 # Get ticker input from the user
 ticker = str(input("Enter the stock ticker: "))
 
-def get_cik(ticker):
+def get_cik(ticker): 
     # Set headers
     headers = {'User-Agent': 'your@email.com'}
     url = 'https://www.sec.gov/files/company_tickers.json'
 
-    tickers_cik = requests.get(url, headers=headers)
 
-    if tickers_cik.status_code == 200:
-        data = tickers_cik.json()
-        ticker = ticker.upper()
+    try: 
+        response = requests.get(url, headers=headers)
+        response.raise_for_status()
+        data = response.json()
         
         for item in data.values():
             if item['ticker'] == ticker:
                 return str(item['cik_str']).zfill(10)
-    else:
-
         return "Ticker not found"
+    except Exception as e:
+        return f"An error fethcing CIK: {e}"
 
 # Get ticker stock data
-
 def get_stock_data(ticker):
     stock = yf.Ticker(ticker)
     data = stock.history(period="1y")
     return data
 
-print(get_cik(ticker))
-print(get_stock_data(ticker))
+cik = get_cik(ticker)
+print(f"CIK for {ticker}: {cik}")
+
+df = pd.DataFrame(get_stock_data(ticker))
+print(df)
+
+
